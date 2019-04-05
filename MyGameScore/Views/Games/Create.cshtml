@@ -1,0 +1,29 @@
+﻿@model MyGameScore.Models.Games
+
+<h2>Lançar Pontos</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DataJogo" class="control-label">Data do jogo</label>
+                <input asp-for="DataJogo" class="form-control" type="date" />
+                <span asp-validation-for="DataJogo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pontos" class="control-label">Quantos pontos você fez</label>
+                <input asp-for="Pontos" class="form-control" />
+                <span asp-validation-for="Pontos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
