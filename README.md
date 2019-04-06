@@ -1,6 +1,6 @@
 # MyGameScore
 
-Utilizado SQL Server, ASP.NET Core e FeatherIcons.
+Utilizado SQL Server, ASP.NET Core, Entity FrameWork e FeatherIcons.
 Banco: myGameScore
 Tabelas: Id(int), Pontos(int), DataJogo(DateTime)
 Script: myGameScore.sql
