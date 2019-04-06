@@ -24,22 +24,17 @@ namespace MyGameScore.Controllers
             return View(await _context.Games.ToListAsync());
         }
 
-        // GET: Games/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Games/List
+        public async Task<IActionResult> List()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            return View(await _context.Games.ToListAsync());
+        }
 
-            var games = await _context.Games
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (games == null)
-            {
-                return NotFound();
-            }
 
-            return View(games);
+        // GET: Games/Results
+        public async Task<IActionResult> Results()
+        {
+            return View(await _context.Games.ToListAsync());
         }
 
         // GET: Games/Create
@@ -59,7 +54,7 @@ namespace MyGameScore.Controllers
             {
                 _context.Add(games);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(List));
             }
             return View(games);
         }
@@ -110,7 +105,7 @@ namespace MyGameScore.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(List));
             }
             return View(games);
         }
@@ -141,7 +136,7 @@ namespace MyGameScore.Controllers
             var games = await _context.Games.FindAsync(id);
             _context.Games.Remove(games);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(List));
         }
 
         private bool GamesExists(int id)

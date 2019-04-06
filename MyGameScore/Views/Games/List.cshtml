@@ -2,9 +2,13 @@
 
 @{
     ViewData["Title"] = "Registro de pontos do Basquete";
+    
+    var itens = Model.OrderBy(a => a.DataJogo);
 }
 
-<h2>Index</h2>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<h3>Listagem de jogos</h3>
 
 <table class="table">
     <thead>
@@ -19,20 +23,25 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in itens) {
+
         <tr>
-            <td>
+            <td class="align">
                 @item.DataJogo.ToString("dd/MM/yy")
             </td>
-            <td>
+            <td class="align">
                 @Html.DisplayFor(modelItem => item.Pontos)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            <td class="align">
+                <a asp-action="Edit" asp-route-id="@item.Id"><i data-feather="edit" class="featherIconEdit"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id"><i data-feather="trash-2" class="featherIconDelete"></i></a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+
+
+<script>
+    feather.replace()
+</script>

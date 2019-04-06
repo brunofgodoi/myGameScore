@@ -44,3 +44,14 @@ body {
     text-align: right;
     color: rebeccapurple;
 }
+
+.featherIconEdit{
+    color: green;
+}
+.featherIconDelete {
+    color: red;
+}
+
+.align{
+    
+}

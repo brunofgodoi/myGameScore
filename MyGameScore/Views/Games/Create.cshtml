@@ -22,11 +22,16 @@
                 <span asp-validation-for="Pontos" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-default" />
+                <input type="submit" value="Registrar" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
+
+<div>
+    <a asp-action="Results" class="btn btn-default">Ir para resultados</a>
+</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
