@@ -35,3 +35,12 @@ body {
         display: none;
     }
 }
+
+.colName {
+    text-align: left;
+}
+
+.colRight {
+    text-align: right;
+    color: rebeccapurple;
+}

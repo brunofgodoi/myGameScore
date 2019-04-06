@@ -10,10 +10,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Pontos)
+                Data do jogo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataJogo)
+                Pontos do jogo
             </th>
             <th></th>
         </tr>
@@ -22,10 +22,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Pontos)
+                @item.DataJogo.ToString("dd/MM/yy")
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataJogo)
+                @Html.DisplayFor(modelItem => item.Pontos)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

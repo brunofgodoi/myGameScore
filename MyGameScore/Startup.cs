@@ -60,7 +60,7 @@ namespace MyGameScore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Games}/{action=Index}/{id?}");
+                    template: "{controller=Games}/{action=Create}/{id?}");
             });
         }
     }
