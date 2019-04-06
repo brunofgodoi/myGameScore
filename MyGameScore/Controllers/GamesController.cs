@@ -54,7 +54,7 @@ namespace MyGameScore.Controllers
             {
                 _context.Add(games);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(List));
+                return RedirectToAction(nameof(Create));
             }
             return View(games);
         }
