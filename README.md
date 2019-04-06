@@ -9,4 +9,4 @@ Script: myGameScore.sql
 "Resultados" - Estatística solicitada no PDF.
 "Listagem" - Listagem de jogos registrados, com CRUD's de edição e exclusão.
 
-By Bruno Ferreira Godoi 05/04/2019
+By Bruno Ferreira Godoi 06/04/2019
